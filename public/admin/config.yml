@@ -1,0 +1,64 @@
+local_backend: true
+
+logo_url: /favicon.svg
+
+backend:
+  name: github
+  repo: zinadesign/astro-sveltia-i18n
+  branch: main
+  base_url: https://astro-sveltia-i18n.zina.dev/
+
+publish_mode: editorial_workflow
+
+slug:
+  encoding: 'ascii'
+  clean_accents: true
+  sanitize_replacement: '-'
+
+media_folder: 'src/assets/images' # Location where files will be stored in the repo
+public_folder: 'src/assets/images' # The src attribute for uploaded media
+
+i18n:
+  structure: 'multiple_folders_i18n_root'
+  locales: ['en', 'uk', 'ru']
+  default_locale: 'en'
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    label_singular: 'Blog Post'
+    folder: 'blog'
+    create: true
+    slug: '{{slug}}'
+    extension: md
+    i18n: true
+    fields:
+      - name: 'title'
+        widget: 'string'
+        label: 'Title'
+        i18n: true
+      - name: 'description'
+        label: 'Description'
+        widget: 'string'
+        required: false
+        i18n: true
+      - name: 'pubDate'
+        widget: 'datetime'
+        label: 'Publish Date'
+        i18n: 'duplicate'
+      - name: 'updatedDate'
+        widget: 'datetime'
+        label: 'Last Modified'
+        required: false
+        default: '{{now}}'
+        i18n: 'duplicate'
+      - name: 'heroImage'
+        label: 'Cover'
+        widget: 'image'
+        required: false
+        i18n: 'duplicate'
+        default: 'src/assets/images/blog-placeholder-1.avif'
+      - name: 'body'
+        widget: 'markdown'
+        label: 'Body'
+        i18n: true
