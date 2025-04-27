@@ -1,4 +1,24 @@
-# Astro Starter Kit: Blog
+# Astro + Sveltia CMS with i18n support
+
+See https://github.com/sveltia/sveltia-cms/discussions/387
+
+To place multilingual content files in the `src/data/<locale>` folder, you can use a [Folder Collections Path](https://decapcms.org/docs/collection-folder/#folder-collections-path) with `multiple_folders`:
+
+```yaml
+# public/admin/config.yml
+folder: src/data
+path: blog/{{slug}}
+```
+
+Then files are generated at:
+
+```sh
+src/data/en/blog/first-post.md
+src/data/ru/blog/first-post.md
+src/data/uk/blog/first-post.md
+```
+
+## Astro Starter Kit: Blog (default)
 
 ```sh
 pnpm create astro@latest -- --template blog
@@ -50,9 +70,9 @@ Any static assets, like images, can be placed in the `public/` directory.
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `pnpm install`         | Installs dependencies                            |
 | `pnpm dev`             | Starts local dev server at `localhost:4321`      |
 | `pnpm build`           | Build your production site to `./dist/`          |
 | `pnpm preview`         | Preview your build locally, before deploying     |

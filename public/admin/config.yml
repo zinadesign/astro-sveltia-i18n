@@ -19,19 +19,19 @@ media_folder: 'src/assets/images' # Location where files will be stored in the r
 public_folder: 'src/assets/images' # The src attribute for uploaded media
 
 i18n:
-  structure: 'multiple_folders_i18n_root'
+  structure: 'multiple_folders'
   locales: ['en', 'uk', 'ru']
   default_locale: 'en'
 
 collections:
   - name: 'blog'
-    label: 'Blog'
-    label_singular: 'Blog Post'
-    folder: 'blog'
-    create: true
-    slug: '{{slug}}'
+    folder: 'src/data'
+    slug: 'blog/{{slug}}'
     extension: md
     i18n: true
+    label: 'Blog'
+    label_singular: 'Blog Post'
+    create: true
     fields:
       - name: 'title'
         widget: 'string'

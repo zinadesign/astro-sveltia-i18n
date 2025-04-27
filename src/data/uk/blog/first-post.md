@@ -1,7 +1,7 @@
 ---
-title: Первый пост RU
+title: Перший пост UK
 description: ''
-pubDate: Jul 08 2022
+pubDate: 2025-04-27T12:22:00
 updatedDate: ''
 heroImage: /blog-placeholder-3.jpg
 ---

@@ -1,7 +1,7 @@
 ---
 title: First post EN
 description: Lorem ipsum dolor sit amet
-pubDate: Jul 08 2022
+pubDate: 2025-04-27T12:22:00
 updatedDate: ''
 heroImage: /blog-placeholder-3.jpg
 ---
