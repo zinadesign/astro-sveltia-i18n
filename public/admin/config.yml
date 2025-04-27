@@ -26,7 +26,7 @@ i18n:
 collections:
   - name: 'blog'
     folder: 'src/data'
-    slug: 'blog/{{slug}}'
+    path: 'blog/{{slug}}'
     extension: md
     i18n: true
     label: 'Blog'
