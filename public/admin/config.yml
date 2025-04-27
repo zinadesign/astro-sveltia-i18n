@@ -62,3 +62,6 @@ collections:
         widget: 'markdown'
         label: 'Body'
         i18n: true
+    index_file:
+      name: _index # File name, required
+      # fields: # Fields for the index file. If omitted, regular entry fields are used
